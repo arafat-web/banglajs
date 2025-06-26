@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BanglaJS ডকুমেন্টেশন</title>
+    <script src="bangla.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8 0%, #e9ecef 100%);
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #1a73e8;
+            color: #fff;
+            padding: 32px 0 24px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(26, 115, 232, 0.08);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px 40px 24px;
+        }
+
+        .section {
+            background: #fff;
+            padding: 28px 32px 24px 32px;
+            margin-bottom: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.2s;
+        }
+
+        .section:hover {
+            box-shadow: 0 4px 24px rgba(26, 115, 232, 0.10);
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-top: 0;
+            font-size: 1.35rem;
+            font-weight: 700;
+            border-left: 4px solid #1a73e8;
+            padding-left: 12px;
+            margin-bottom: 18px;
+        }
+
+        p,
+        li {
+            font-size: 1.08rem;
+        }
+
+        pre {
+            background: #f5f7fa;
+            padding: 14px 18px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 1rem;
+            margin: 16px 0;
+            border-left: 3px solid #1a73e8;
+        }
+
+        button {
+            background: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 22px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 8px;
+            margin-right: 8px;
+            transition: background 0.15s;
+            font-family: inherit;
+            box-shadow: 0 1px 3px rgba(26, 115, 232, 0.08);
+        }
+
+        button:hover,
+        button:focus {
+            background: #1761c6;
+        }
+
+        input[type="text"] {
+            padding: 7px 10px;
+            border: 1px solid #bfc9d1;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-right: 8px;
+            font-family: inherit;
+            transition: border 0.15s;
+        }
+
+        input[type="text"]:focus {
+            border: 1.5px solid #1a73e8;
+            outline: none;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin: 10px 0 18px 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        form {
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 0 6px 24px 6px;
+            }
+
+            .section {
+                padding: 16px 8px 14px 8px;
+            }
+        }
+
+        code {
+            background: #e3e8ef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.98em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>📘 BanglaJS ডকুমেন্টেশন</h1>
+        <p style="margin: 12px 0 0 0; font-size:1.15rem; font-weight:400;">বাংলা ভাষায় JavaScript লাইব্রেরি ব্যবহারের
+            নির্দেশিকা</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>লেখা পরিবর্তন</h2>
+            <p id="text1">প্রাথমিক লেখা</p>
+            <button onclick="$B('#text1').লেখো('নতুন লেখা!')">লেখা দাও</button>
+            <pre><code>$B('#text1').লেখো('নতুন লেখা!')</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>রঙ ও ব্যাকগ্রাউন্ড</h2>
+            <p id="text2">রঙ পরিবর্তন</p>
+            <button onclick="$B('#text2').রং('blue').ব্যাকগ্রাউন্ডরং('lightgray')">স্টাইল করো</button>
+            <pre><code>$B('#text2').রং('blue').ব্যাকগ্রাউন্ডরং('lightgray')</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>ইভেন্ট হ্যান্ডলার</h2>
+            <button id="btnClick">ক্লিক করো</button>
+            <p id="output1"></p>
+            <pre><code>
+$B('#btnClick').ক্লিক(function() {
+    $B('#output1').লেখো('তুমি ক্লিক করেছো!');
+});
+            </code></pre>
+            <script>
+                $B('#btnClick').ক্লিক(function () {
+                    $B('#output1').লেখো('তুমি ক্লিক করেছো!');
+                });
+            </script>
+        </div>
+
+        <div class="section">
+            <h2>মান সেট ও নেওয়া</h2>
+            <input type="text" id="nameInput" placeholder="আপনার নাম লিখুন">
+            <button onclick="$B('#nameOutput').লেখো($B('#nameInput').মান_নাও())">দেখাও</button>
+            <p id="nameOutput"></p>
+            <pre><code>
+$B('#nameOutput').লেখো($B('#nameInput').মান_নাও())
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Ajax: GET উদাহরণ</h2>
+            <button onclick="
+                $B().আনো_ডাটা('https://jsonplaceholder.typicode.com/posts/1', function(err, data) {
+                    if (!err) {
+                        $B('#ajaxResult').লেখো(data.title);
+                    }
+                });">ডাটা আনো</button>
+            <p id="ajaxResult"></p>
+            <pre><code>
+$B().আনো_ডাটা('https://jsonplaceholder.typicode.com/posts/1', function(err, data) {
+    if (!err) {
+        $B('#ajaxResult').লেখো(data.title);
+    }
+});
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>CSS</h2>
+            <p id="cssDemo">CSS পরিবর্তন হবে</p>
+            <button onclick="$B('#cssDemo').css({ fontSize: '20px', color: 'red' })">CSS প্রয়োগ করো</button>
+            <pre><code>
+$B('#cssDemo').css({ fontSize: '20px', color: 'red' })
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>DOM Traversal</h2>
+            <ul id="list">
+                <li>১ম</li>
+                <li>২য়</li>
+                <li>৩য়</li>
+            </ul>
+            <button onclick="$B('#list li').প্রথম().লেখো('প্রথম')">প্রথম</button>
+            <button onclick="$B('#list li').শেষ().লেখো('শেষ')">শেষ</button>
+            <pre><code>
+$B('#list li').প্রথম().লেখো('প্রথম')
+$B('#list li').শেষ().লেখো('শেষ')
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>ফর্ম জমা</h2>
+            <form id="formTest" autocomplete="off">
+                <input type="text" id="fval" placeholder="কিছু লিখুন">
+                <button type="submit">জমা দিন</button>
+            </form>
+            <p id="formMsg"></p>
+            <pre><code>
+$B('#formTest').জমা(function() {
+    const val = $B('#fval').মান_নাও();
+    $B('#formMsg').লেখো('আপনার ইনপুট: ' + val);
+});
+            </code></pre>
+            <script>
+                $B('#formTest').জমা(function () {
+                    const val = $B('#fval').মান_নাও();
+                    $B('#formMsg').লেখো('আপনার ইনপুট: ' + val);
+                });
+            </script>
+        </div>
+        <!-- নতুন BanglaJS ফিচার ডেমো শুরু -->
+        <div class="section">
+            <h2>ক্লাস যোগ ও বাদ</h2>
+            <p id="classDemo">ক্লাস পরিবর্তন হবে</p>
+            <button onclick="$B('#classDemo').ক্লাস_দাও('highlight')">ক্লাস যোগ করো</button>
+            <button onclick="$B('#classDemo').ক্লাস_বাদ_দাও('highlight')">ক্লাস বাদ দাও</button>
+            <pre><code>$B('#classDemo').ক্লাস_দাও('highlight')
+$B('#classDemo').ক্লাস_বাদ_দাও('highlight')</code></pre>
+            <style>
+                .highlight {
+                    background: #ffe082;
+                    color: #b26a00;
+                }
+            </style>
+        </div>
+        <div class="section">
+            <h2>ডাবল ক্লিক, মাউস ওভার, মাউস আউট</h2>
+            <button id="dblBtn">ডাবল ক্লিক করো</button>
+            <button id="hoverBtn">মাউস ওভার/আউট</button>
+            <p id="eventMsg"></p>
+            <pre><code>
+$B('#dblBtn').ডাবল_ক্লিক(function() {
+    $B('#eventMsg').লেখো('ডাবল ক্লিক!');
+});
+$B('#hoverBtn').মাউস_ওভার(function() {
+    $B('#eventMsg').লেখো('মাউস ওভার!');
+});
+$B('#hoverBtn').মাউস_আউট(function() {
+    $B('#eventMsg').লেখো('মাউস আউট!');
+});
+            </code></pre>
+            <script>
+                $B('#dblBtn').ডাবল_ক্লিক(function () {
+                    $B('#eventMsg').লেখো('ডাবল ক্লিক!');
+                });
+                $B('#hoverBtn').মাউস_ওভার(function () {
+                    $B('#eventMsg').লেখো('মাউস ওভার!');
+                });
+                $B('#hoverBtn').মাউস_আউট(function () {
+                    $B('#eventMsg').লেখো('মাউস আউট!');
+                });
+            </script>
+        </div>
+        <div class="section">
+            <h2>কীবোর্ড, ফোকাস, ব্লার</h2>
+            <input type="text" id="keyInput" placeholder="কিছু টাইপ করুন">
+            <p id="keyMsg"></p>
+            <pre><code>
+$B('#keyInput').কীবোর্ড(function() {
+    $B('#keyMsg').লেখো('কিছু টাইপ হয়েছে!');
+});
+$B('#keyInput').ফোকাস(function() {
+    $B('#keyMsg').লেখো('ইনপুটে ফোকাস!');
+});
+$B('#keyInput').ব্লার(function() {
+    $B('#keyMsg').লেখো('ইনপুট ব্লার!');
+});
+            </code></pre>
+            <script>
+                $B('#keyInput').কীবোর্ড(function () {
+                    $B('#keyMsg').লেখো('কিছু টাইপ হয়েছে!');
+                });
+                $B('#keyInput').ফোকাস(function () {
+                    $B('#keyMsg').লেখো('ইনপুটে ফোকাস!');
+                });
+                $B('#keyInput').ব্লার(function () {
+                    $B('#keyMsg').লেখো('ইনপুট ব্লার!');
+                });
+            </script>
+        </div>
+        <div class="section">
+            <h2>সক্রিয়/নিষ্ক্রিয়, লুকাও/দেখাও</h2>
+            <button id="disBtn">নিষ্ক্রিয় করো</button>
+            <button id="enBtn">সক্রিয় করো</button>
+            <button id="hideBtn">লুকাও</button>
+            <button id="showBtn">দেখাও</button>
+            <input type="text" id="disInput" value="এটি সক্রিয়/নিষ্ক্রিয় হবে">
+            <pre><code>
+$B('#disInput').নিষ্ক্রিয়_করো()
+$B('#disInput').সক্রিয়_করো()
+$B('#disInput').লুকাও()
+$B('#disInput').দেখাও()
+            </code></pre>
+            <script>
+                $B('#disBtn').ক্লিক(function () { $B('#disInput').নিষ্ক্রিয়_করো(); });
+                $B('#enBtn').ক্লিক(function () { $B('#disInput').সক্রিয়_করো(); });
+                $B('#hideBtn').ক্লিক(function () { $B('#disInput').লুকাও(); });
+                $B('#showBtn').ক্লিক(function () { $B('#disInput').দেখাও(); });
+            </script>
+        </div>
+        <div class="section">
+            <h2>অ্যাট্রিবিউট সেট/নাও</h2>
+            <input type="text" id="attrInput" placeholder="অ্যাট্রিবিউট টেস্ট">
+            <button onclick="$B('#attrInput').অ্যাট্রিবিউট_দাও('placeholder', 'নতুন প্লেসহোল্ডার')">অ্যাট্রিবিউট
+                দাও</button>
+            <button onclick="alert($B('#attrInput').অ্যাট্রিবিউট_নাও('placeholder'))">অ্যাট্রিবিউট নাও</button>
+            <pre><code>
+$B('#attrInput').অ্যাট্রিবিউট_দাও('placeholder', 'নতুন প্লেসহোল্ডার')
+$B('#attrInput').অ্যাট্রিবিউট_নাও('placeholder')
+            </code></pre>
+        </div>
+        <div class="section">
+            <h2>HTML সেট/নাও, যুক্ত করো, খালি করো, সরাও</h2>
+            <div id="htmlDemo">HTML ডেমো</div>
+            <button onclick="$B('#htmlDemo').html_দাও('<b>নতুন HTML</b>')">HTML দাও</button>
+            <button onclick="alert($B('#htmlDemo').html_নাও())">HTML নাও</button>
+            <button onclick="$B('#htmlDemo').যুক্ত_করো('<i>যোগ</i>')">যুক্ত করো</button>
+            <button onclick="$B('#htmlDemo').খালি_করো()">খালি করো</button>
+            <button onclick="$B('#htmlDemo').সরাও()">সরাও</button>
+            <pre><code>
+$B('#htmlDemo').html_দাও('<b>নতুন HTML</b>')
+$B('#htmlDemo').html_নাও()
+$B('#htmlDemo').যুক্ত_করো('<i>যোগ</i>')
+$B('#htmlDemo').খালি_করো()
+$B('#htmlDemo').সরাও()
+            </code></pre>
+        </div>
+        <div class="section">
+            <h2>প্রতিটি, সংখ্যা</h2>
+            <ul id="eachList">
+                <li>এক</li>
+                <li>দুই</li>
+                <li>তিন</li>
+            </ul>
+            <button onclick="$B('#eachList li').প্রতিটি(function(el){el.style.color='green';})">সবুজ করো</button>
+            <button onclick="alert($B('#eachList li').সংখ্যা())">সংখ্যা দেখাও</button>
+            <pre><code>
+$B('#eachList li').প্রতিটি(function(el){el.style.color='green';})
+$B('#eachList li').সংখ্যা()
+            </code></pre>
+        </div>
+        <div class="section">
+            <h2>Ajax: POST, PUT, DELETE</h2>
+            <button
+                onclick="$B().পাঠাও_ডাটা('https://jsonplaceholder.typicode.com/posts', {title:'নতুন'}, function(e,d){alert('POST: '+(d && d.id));})">POST</button>
+            <button
+                onclick="$B().হালনাগাদ_করো('https://jsonplaceholder.typicode.com/posts/1', {title:'আপডেট'}, function(e,d){alert('PUT: '+(d && d.title));})">PUT</button>
+            <button
+                onclick="$B().মুছে_ফেলো('https://jsonplaceholder.typicode.com/posts/1', function(e,d){alert('DELETE: '+(d && d.id));})">DELETE</button>
+            <pre><code>
+$B().পাঠাও_ডাটা('url', data, callback)
+$B().হালনাগাদ_করো('url', data, callback)
+$B().মুছে_ফেলো('url', callback)
+            </code></pre>
+        </div>
+        <!-- নতুন BanglaJS ফিচার ডেমো শেষ -->
+    </main>
+</body>
+
+</html>
