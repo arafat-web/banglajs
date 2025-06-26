@@ -19,11 +19,22 @@ BanglaJS হলো একটি হালকা DOM ম্যানিপুল�
 
 ## 📦 Installation / ইনস্টলেশন
 
-Include the script in your HTML file:
+You can use BanglaJS in three ways:
 
-```html
-<script src="bangla.js"></script>
-```
+- **CDN:**
+    ```html
+    <script src="https://cdn.jsdelivr.net/gh/arafat-web/banglajs/bangla.js"></script>
+    ```
+
+- **Download:**
+    [bangla.js ডাউনলোড করুন](https://github.com/arafat-web/banglajs/raw/main/bangla.js)
+
+- **Local:**
+    ```html
+    <script src="bangla.js"></script>
+    ```
+
+CDN, ডাউনলোডকৃত বা লোকাল স্ক্রিপ্টটি আপনার `<head>` বা `<body>` ট্যাগে যুক্ত করুন।
 
 ---
 
