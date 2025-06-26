@@ -27,7 +27,7 @@ You can use BanglaJS in three ways:
     ```
 
 - **Download:**
-    [bangla.js ডাউনলোড করুন](https://github.com/arafat-web/banglajs/raw/main/bangla.js)
+    [bangla.js ডাউনলোড করুন](https://github.com/arafat-web/banglajs/archive/refs/heads/master.zip)
 
 - **Local:**
     ```html
