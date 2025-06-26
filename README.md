@@ -1,5 +1,7 @@
 # 🌐 BanglaJS (বাংলা.জেএস)
-
+<p align="center">
+    <img src="banglajs.png" alt="BanglaJS Logo" width="180">
+</p>
 BanglaJS is a lightweight DOM manipulation library that allows developers to write JavaScript in Bengali. Perfect for beginners and educators who prefer coding in the native language.
 
 BanglaJS হলো একটি হালকা DOM ম্যানিপুলেশন লাইব্রেরি যা দিয়ে আপনি বাংলা ভাষায় জাভাস্ক্রিপ্ট কোড লিখতে পারবেন। এটি নতুনদের ও শিক্ষার্থীদের জন্য দারুন উপযোগী।
